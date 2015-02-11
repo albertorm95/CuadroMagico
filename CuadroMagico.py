@@ -3,42 +3,69 @@
 #Empieza en el centro con 1 y luego uno arriba y a la izq, si no abajo
 #2,3,4,5...
 #El primer [fila] [columna] [[fila]columna]
+
 print "CUADRO MAGICO"
 tamano=int(raw_input("Ingrese el tamaño del Cuadro: "))
 centro=int(tamano/2)
 cuadro=[[0 for i in range(tamano)] for i in range(tamano)]
+cuadro[0][centro]=1
 
-cuadro[0][2]=2
-cuadro[1][2]=3
-#for n in range(tamano):
-print cuadro
-print str(cuadro[0:3][0])
-print str(cuadro[0][0:3])
+num=1
+fila=0
+columna=centro
+ubacion=0
 
+print cuadro[tamano-1][tamano-1]
 
-#cuadro=[[4,9,2],[3,5,7],[8,1,4]]
-
-#print "Favor diga ubicacion en coordenadas [x,y]"
-
-#while (victoria <=15):
- #   for i in range(2):
-  #      if sum(cuadro[0:3][i])==15:
-   #         victoria=victoria+1
-    #    elif sum(cuadro[0:3][i])!=15:
-     #       victoria=victoria-1
-    #print victoria
+for i in range((tamano*tamano)-1):
     
-
+    for n in range(tamano):    
+        print str(cuadro[0:tamano][n])
+    print "------------------------------"
+    num=num+1
+    print "VA EL NUMERO"+str(num)
+    print "principio"
+    fila=fila-1
+    print "fila1"
+    print fila
+    ubicacion=columna
+    print "ubicacion"
+    print ubicacion
+    columna=columna-1
+    print "columna1"
+    print columna
+    if fila<0:        
+        fila=tamano-1
+        print "fila2"
+        print fila
+    if columna<0:        
+        columna=tamano-1
+        print "columna2"
+        print columna
+    else:        
+        columna=ubicacion-1
+        print "columna3"
+        print columna
+    print "desnalgue"        
+    if cuadro[fila][columna]==0:
+        print "PRIMER IF ==0"
+        cuadro[fila][columna]=num
         
-    #for i in range(3):
-     #   x=int(raw_input("x: "))#-1
-      #  y=int(raw_input("y: "))#-1
-      #  numero=int(raw_input("Ingrese numero: "))
-      #  cuadro[x][y]=numero
+    elif cuadro[fila][columna]!=0:
+        print "SEGUNDO IF !=0"
+        fila=fila-1
+        if fila<0:        
+            fila=tamano-1
+        print "fila3"
+        print fila
+        columna=ubicacion
+        print cuadro[-1][columna]
+        cuadro[fila][columna]=num
+       
 
-#        print str(cuadro[0][0:3])+"\n"+str(cuadro[1][0:3])+"\n"+str(cuadro[2][0:3])
 
-    
+for n in range(tamano):    
+    print str(cuadro[0:tamano][n])
 
-    
+   
 raw_input("Press Enter to continue...")
