@@ -22,12 +22,15 @@ for i in range((tamano*tamano)-1):
     num=num+1
     print "VA EL NUMERO"+str(num)
     print "principio"
+    ubifila=fila
+    print "ubicacion"
+    print ubifila
     fila=fila-1
     print "fila1"
     print fila
-    ubicacion=columna
+    ubicolumna=columna
     print "ubicacion"
-    print ubicacion
+    print ubicolumna
     columna=columna-1
     print "columna1"
     print columna
@@ -40,7 +43,7 @@ for i in range((tamano*tamano)-1):
         print "columna2"
         print columna
     else:        
-        columna=ubicacion-1
+        columna=ubicolumna-1
         print "columna3"
         print columna
     print "desnalgue"        
@@ -50,12 +53,14 @@ for i in range((tamano*tamano)-1):
         
     elif cuadro[fila][columna]!=0:
         print "SEGUNDO IF !=0"
-        fila=fila-1
-        if fila<0:        
-            fila=tamano-1
+        fila=fila+1
         print "fila3"
         print fila
-        columna=ubicacion
+        if fila>0:        
+            fila=ubifila+1
+        print "fila4"
+        print fila
+        columna=ubicolumna
         print cuadro[-1][columna]
         cuadro[fila][columna]=num
        
