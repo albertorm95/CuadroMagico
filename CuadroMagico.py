@@ -15,10 +15,7 @@ fila=0
 columna=centro
 ubacion=0
 
-print cuadro[tamano-1][tamano-1]
-
-for i in range((tamano*tamano)-1):
-    
+for i in range((tamano*tamano)-1):    
     for n in range(tamano):    
         print str(cuadro[0:tamano][n])
     print "------------------------------"
