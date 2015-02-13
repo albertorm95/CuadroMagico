@@ -10,7 +10,7 @@ Un algoritmo que se encarga de crear un cuadro magico de multiples tamaños, un c
 
 Como funciona:
 
-Se inicia solicitando el tamaño del Cuadro Magico
+Se inicia solicitando el tamaño del Cuadro Magico, luego se llena ese "arreglo" con 0s, se obtiene la ubicacion central y se le asigna a esa ubicacion el numero 1, luego en un for del tamano del arreglo -1 se haces unos procedimientos para moverse dentro de "arreglo" y asi poder llenarlo de los numeros necesarios para que se cree el Cuadro Magico, al final obtendremos la impresion del Cuadro Magico.
 
 -----------------------------------------
 

@@ -2,7 +2,9 @@
 
 #Inicio:
 print "CUADRO MAGICO"
-tamano=int(raw_input("Ingrese el tamaño del Cuadro: "))
+tamano=int(raw_input("Ingrese el tamaño del Cuadro impar: "))
+magia=tamano*(pow(tamano,2)+1)/2
+print "El numero magico es: "+str(magia)
 centro=int(tamano/2)
 cuadro=[[0 for i in range(tamano)] for i in range(tamano)]
 cuadro[0][centro]=1
